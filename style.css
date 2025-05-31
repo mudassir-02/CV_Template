@@ -1,0 +1,185 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f8;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .cv-container {
+      background-color: #fff;
+      max-width: 800px;
+      width: 100%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Banner */
+    .banner {
+      width: 100%;
+      height: 180px;
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    /* Profile picture overlapping banner */
+    .profile-pic {
+      position: absolute;
+      bottom: -60px;  /* half of profile pic height */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 5px solid white;
+      overflow: hidden;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Header with name & title */
+    .header {
+      padding: 80px 40px 30px; /* padding-top accounts for profile pic */
+      text-align: center;
+      border-bottom: 1px solid #eee;
+    }
+
+    .header h1 {
+      font-size: 2.8em;
+      margin-bottom: 8px;
+      color: #2e86de;
+    }
+
+    .header p {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #666;
+      letter-spacing: 0.05em;
+    }
+
+    /* Content */
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 30px 40px;
+    }
+
+    .left-column {
+      flex: 1 1 250px;
+      padding-right: 40px;
+      border-right: 2px solid #eee;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section h3 {
+      border-bottom: 2px solid #2e86de;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+      color: #2e86de;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+    }
+
+    .contact-info p {
+      margin-bottom: 8px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .skills-list {
+      list-style-type: none;
+      padding-left: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list li {
+      background-color: #d6e9ff;
+      color: #2e86de;
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+
+    .right-column {
+      flex: 2 1 400px;
+      padding-left: 40px;
+    }
+
+    .right-column h2 {
+      color: #2e86de;
+      margin-bottom: 15px;
+      font-size: 1.6em;
+    }
+
+    .job {
+      margin-bottom: 20px;
+    }
+
+    .job h4 {
+      margin-bottom: 5px;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .job .period {
+      font-size: 0.9em;
+      color: #777;
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .job ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      color: #555;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .left-column, .right-column {
+        padding: 0;
+        border: none;
+      }
+      .left-column {
+        margin-bottom: 30px;
+      }
+      .header {
+        padding-top: 70px;
+      }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+      }
+    }
